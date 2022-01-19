@@ -1,0 +1,8 @@
+contry, number, webhook, type, info
+#1 China, 1555699, https://TuyAnCong.github.io/Covid19/api/webhook/China.csv, CSV, Github
+#2 US, 246777, https://TuyAnCong.github.io/Covid19/api/webhook/US.csv, CSV, Github
+#3 UK, 464588, https://TuyAnCong.github.io/Covid19/api/webhook/UK.csv, CSV, Github
+#4 Tokyo, 1559, https://TuyAnCong.github.io/Covid19/Tokyo.txt, TXT, Website
+#5 India, 24679, https://TuyAnCong.github.io/Covid19/India.txt, TXT, Website
+#6 Vietnam, 4648, https://TuyAnCong.github.io/Covid19/Vietnam.html, HTML, Website
+Update at Reload Browser to Update record.csv, NaN, NaN, Message, TXT
