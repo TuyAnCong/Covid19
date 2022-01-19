@@ -1,83 +1,47 @@
-<div id="hero" class="hero">
-  <h1 class="title">Record</h1>
-  <div id="todoApp" class="todo-app">
-    <div id="todoMenu1" class="todo-menu-1">
-      <button id="toggleAll" class="toggle-all" aria-label="Toggle all to do tasks">
-        <span class="rotate">&#x276F;</span>
-      </button>
-      <input id="addTodoTextInput" class="add-todo-text-input" type="text" placeholder="What do you need to do?" aria-label="Enter to do text" autofocus>
-    </div>
-    <ul id="todos" class="todos" aria-label="List of to do tasks"></ul>
-    <div id="todoMenu2" class="todo-menu-2">
-      <label id="todosLeft" class="todos-left" aria-label="Number of to do tasks left to complete"></label>
-      <div id="todoMenu2Buttons" class="todo-menu-2-buttons">
-        <button id="showAllTodos" class="menu-2-button active" aria-label="Show all to do tasks">All</button>
-        <button id="showUncompletedTodos" class="menu-2-button" aria-label="Show active to do tasks">Active</button>
-        <button id="showCompletedTodos" class="menu-2-button" aria-label="Show completed to do tasks">Completed</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Todo List</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0 ml-auto">
+              
+            <input id="todoName" class="form-control mr-sm-2" type="text" placeholder="Todo Name" aria-label="Todo Name">
+            <select id="todoDay" class="form-control mr-sm-2">
+            </select>
+            <select id="todoMonth" class="form-control mr-sm-2">
+            </select>
+            <select id="todoYear" class="form-control mr-sm-2">
+            </select>
+            <button class="btn btn-danger my-2 my-sm-0" type="button" onclick="addTodo()">Add</button>
+          </form>
+        </div>
+      </nav>
+</head>
+<body>
+    <h1>NAVBAR</h1>
+
+    <div class="container-fluid">
+      <div class="row" id="todo-list">
+          <!-- Todos Here -->
       </div>
-      <button id="deleteCompletedButton" class="delete-completed-button" aria-label="Clear completed to do tasks">Clear completed</button>
     </div>
-  </div>
-</div>
-<style>
-:root {
-  --mobile-hero-app-row: 9fr;
-}
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-.hero {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 550px 1fr;
-  grid-template-rows: 60px 1fr 45px;
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 2;
-  grid-row: 2;
-  background: white;
-  overflow: auto;
-  border-radius: 7px;
-  -webkit-box-shadow: 
-    0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 
-    0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
-  /* Because scrollbar is usually between 14-18px. */
-  margin-right: -18px;
-  margin-left: -18px;
-}
-
-.todo-menu-1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50px 1fr;
-  grid-template-columns: 50px 1fr;
-  -ms-grid-rows: 60px;
-  grid-template-rows: 60px;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.19);
-  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.19);
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.add-todo-text-input {
-  outline: none;
-  border: none;
-</style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
