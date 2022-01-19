@@ -1,0 +1,83 @@
+<div id="hero" class="hero">
+  <h1 class="title">Record</h1>
+  <div id="todoApp" class="todo-app">
+    <div id="todoMenu1" class="todo-menu-1">
+      <button id="toggleAll" class="toggle-all" aria-label="Toggle all to do tasks">
+        <span class="rotate">&#x276F;</span>
+      </button>
+      <input id="addTodoTextInput" class="add-todo-text-input" type="text" placeholder="What do you need to do?" aria-label="Enter to do text" autofocus>
+    </div>
+    <ul id="todos" class="todos" aria-label="List of to do tasks"></ul>
+    <div id="todoMenu2" class="todo-menu-2">
+      <label id="todosLeft" class="todos-left" aria-label="Number of to do tasks left to complete"></label>
+      <div id="todoMenu2Buttons" class="todo-menu-2-buttons">
+        <button id="showAllTodos" class="menu-2-button active" aria-label="Show all to do tasks">All</button>
+        <button id="showUncompletedTodos" class="menu-2-button" aria-label="Show active to do tasks">Active</button>
+        <button id="showCompletedTodos" class="menu-2-button" aria-label="Show completed to do tasks">Completed</button>
+      </div>
+      <button id="deleteCompletedButton" class="delete-completed-button" aria-label="Clear completed to do tasks">Clear completed</button>
+    </div>
+  </div>
+</div>
+<style>
+:root {
+  --mobile-hero-app-row: 9fr;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 550px 1fr;
+  grid-template-rows: 60px 1fr 45px;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  background: white;
+  overflow: auto;
+  border-radius: 7px;
+  -webkit-box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  /* Because scrollbar is usually between 14-18px. */
+  margin-right: -18px;
+  margin-left: -18px;
+}
+
+.todo-menu-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+  grid-template-columns: 50px 1fr;
+  -ms-grid-rows: 60px;
+  grid-template-rows: 60px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.add-todo-text-input {
+  outline: none;
+  border: none;
+</style>
