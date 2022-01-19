@@ -14,7 +14,9 @@ function addTodo(){
     let newTodo = document.createElement('div');
     newTodo.className = 'col-lg-3 card-col';
     newTodo.innerHTML += '<div class="card" style="width: 18rem;"><div class="card-img-top card-top">' + day + ' Day' +
-    '<div class="card-body"><p class="card-text card-main">'+ todoName.value +'</p><input type="button" id="btnDelete" class="btn btn-primary" value="Delete"></div></div>';
+    '<div class="card-body"><p class="card-text card-main">'+ todoName.value +'</p><input type="button" id="btnDelete" class="btn btn-primary" value="Delete"></div></div>
+<div class="card" style="width: 18rem;"><div class="card-img-top card-top">' + day + ' Day' +
+     <div class="card-body"><p class="card-text card-main">Updated</p></div></div>';
     newTodo.id = "todo" + todoList.childElementCount;
     todoList.appendChild(newTodo);
 
